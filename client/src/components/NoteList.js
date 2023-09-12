@@ -38,9 +38,11 @@ const NoteList = (props) => {
               <Card.Body>
                 <Card.Title>{note.title}</Card.Title>
 
-                <Card.Text>{note.text}</Card.Text>
-                <Card.Text>{note.startDate}</Card.Text>
-                <Card.Text>{note.endDate}</Card.Text>
+                <Card.Text>{note.medicine}</Card.Text>
+                <Card.Text>{note.startTime}</Card.Text>
+                <Card.Text>{note.period}</Card.Text>
+                <Card.Text>{note.numberOfTime}</Card.Text>
+                <Card.Text>{note.total}</Card.Text>
                 <Button
                   className="btn-block btn-danger"
                   onClick={() => handleDeleteNote(note._id)}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   ApolloClient,
@@ -12,6 +12,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SavedNotes from "./pages/SavedNotes";
 import AddNote from "./pages/AddNotes";
 import Navbar from "./components/Navbar";
+
+import runOneSignal from "./utils/oneSignal";
+import OneSignal from "react-onesignal";
 
 const httpLink = createHttpLink({
   uri: "/graphql",

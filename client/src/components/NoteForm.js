@@ -61,7 +61,7 @@ const NoteForm = () => {
 
     try {
       const { data } = await addNote({
-        variables: { noteData: formattedData },
+        variables: { noteData: userFormData },
       });
 
       console.log(data);

@@ -14,7 +14,6 @@ export const GET_ME = gql`
         period
         numberOfTime
         total
-        timeArray
         userId
       }
     }

@@ -25,8 +25,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,400;1,300&display=swap"
     rel="stylesheet">
 
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.init({
+          appId: "edad183c-31b0-4db4-82e8-348e4b67bf6a",
+        });
+      });
+    </script>
+
   <title>Google Book Search</title>
 </head>
+
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>

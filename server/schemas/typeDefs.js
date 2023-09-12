@@ -13,11 +13,10 @@ const typeDefs = gql`
     _id: ID!
     title: String!
     medicine: String!
-    startTime: Int!
-    period: Int!
-    numberOfTime: Int!
-    total: Int!
-    timeArray: [Int]
+    startTime: String!
+    period: String!
+    numberOfTime: String!
+    total: String!
     userId: String!
   }
 
@@ -29,10 +28,10 @@ const typeDefs = gql`
   input NoteInput {
     title: String!
     medicine: String!
-    startTime: Int!
-    period: Int!
-    numberOfTime: Int!
-    total: Int!
+    startTime: String!
+    period: String!
+    numberOfTime: String!
+    total: String!
   }
 
   type Query {

@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+//const validateInteger = require("mongoose-integer");
 
 // This is a subdocument schema, it won't become its own model but we'll use it as the schema for the User's `savedBooks` array in User.js
 const noteSchema = new Schema(
@@ -12,19 +13,19 @@ const noteSchema = new Schema(
       required: true,
     },
     startTime: {
-      type: Number,
+      type: String,
       required: true,
     },
     period: {
-      type: Number,
+      type: String,
       required: true,
     },
     numberOfTime: {
-      type: Number,
+      type: String,
       required: true,
     },
     total: {
-      type: Number,
+      type: String,
       required: true,
     },
     userId: {
@@ -38,7 +39,7 @@ const noteSchema = new Schema(
     },
   }
 );
-
+/*
 noteSchema.virtual("timeArray").get(function () {
   let count = 0;
   let hour = new Date(startTime).getHours();
@@ -47,8 +48,8 @@ noteSchema.virtual("timeArray").get(function () {
 
   let timeArray = [];
 
-  for (i = 0; i < this.total; i++) {
-    if (count === this.numberOfTime || hour > 21) {
+  for (i = 0; i < parseInt(this.total); i++) {
+    if (count === parseInt(this.numberOfTime) || hour > 21) {
       count = 0;
       hour = 8;
       date += 24 * 3600 * 1000;
@@ -56,14 +57,14 @@ noteSchema.virtual("timeArray").get(function () {
 
     time = date + hour * 3600 * 1000;
 
-    timeArray.push(time);
+    timeArray.push(`${time}`);
 
-    hour += this.period;
+    hour += parseInt(this.period);
     count += 1;
   }
 
   return timeArray;
-});
+});*/
 
 const Note = model("Note", noteSchema);
 
